@@ -1,0 +1,19 @@
+{
+  "name": "@monitor-sdk/performance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rimraf dist && rollup --config rollup.config.dev.js -w",
+    "build": "run-p build:bundle build:esm",
+    "build:bundle": "rimraf dist && rollup --config",
+    "build:esm": "rimraf esm && tsc -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "web-vitals": "^3.4.0",
+    "@monitor-sdk/core": "workspace:*"
+  }
+}
